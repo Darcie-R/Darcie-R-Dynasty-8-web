@@ -1,0 +1,51 @@
+/* Import the font if needed */
+
+/* Global styles */
+body {
+    font-family: "Outfit", sans-serif; /* Apply the desired font */
+    color: #333; /* Set default text color */
+  }
+  
+  a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #f8f9fa; /* Set header background color */
+    padding: 20px 0; /* Add padding to header */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #343a40; /* Set footer background color */
+    color: #fff; /* Set footer text color */
+    padding: 20px 0; /* Add padding to footer */
+  }
+  
+  /* Navigation styles */
+  .navbar {
+    background-color: #007bff; /* Set navigation background color */
+    color: #fff; /* Set navigation text color */
+  }
+  
+  /* Button styles */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Set default button background color */
+    color: #fff; /* Set default button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+  
