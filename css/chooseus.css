@@ -1,0 +1,80 @@
+/* Why Choose Us section */
+.why-choose-us-section {
+    text-align: center; /* Center align the section */
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.why-choose-us-section .section-title {
+    margin-top: 5px; /* Add space from the top */
+    margin-bottom: -10px; /* Add space below the section title */
+    font-family: 'Lato Heavy', sans-serif; /* Change title font to Lato Heavy */
+    font-size: 20px; /* Adjust the default font size */
+}
+
+.why-choose-us-section .bits {
+    display: flex; /* Use flexbox to display items */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items along the main axis */
+}
+
+.why-choose-us-section .bit {
+    width: calc(25% - 20px); /* Set the width of each bit */
+    margin-bottom: 50px; /* Add space between each bit */
+    margin: 50px auto;
+    padding: 30px; /* Add padding to each bit */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    text-align: center;
+}
+
+/* Style for the bit title */
+.why-choose-us-section .bit h3 {
+    font-family: 'Lato', sans-serif; /* Change title font to Lato */
+    font-size: 25px; /* Adjust the default font size */
+    margin-bottom: 30px; /* Add space below the title */
+    text-align: center;
+    color: #008000; /* Default font color */
+}
+
+/* Style for the bit description */
+.why-choose-us-section .bit p {
+    font-family: 'Roboto', sans-serif; /* Change text font to Roboto */
+    font-size: 20px; /* Adjust the default font size */
+    line-height: 1; /* Increase line height for better readability */
+    text-align: center;
+    color: #000000; /* Default font color */
+    margin-bottom: 30px; 
+}
+
+/* Adjust distance between icon and description */
+.why-choose-us-section .bit i {
+    margin-bottom: 30px; /* Adjust the distance */
+    font-size: 36px; 
+}
+
+/* Icon hover effect */
+.why-choose-us-section .bit i:hover {
+    color: #008000; /* Change icon color to green on hover */
+    animation: shake 0.3s infinite alternate; /* Shake animation on hover */
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(-5deg); /* Rotate left */
+    }
+    to {
+        transform: rotate(5deg); /* Rotate right */
+    }
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 599px) {
+    .why-choose-us-section .bits {
+        flex-direction: column; /* Change flex direction to column for mobile */
+    }
+
+    .why-choose-us-section .bit {
+        width: 100%; /* Set width to 100% for mobile */
+        margin-bottom: 30px; /* Reduce margin for mobile */
+    }
+}

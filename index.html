@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=2">
+    <link rel="stylesheet" type="text/css" href="css/testimonial-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/review.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=2">
+    <link rel="stylesheet" type="text/css" href="css/testimonial-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/banner.css">
+    <link rel="stylesheet" type="text/css" href="css/chooseus.css">
+    <link rel="stylesheet" type="text/css" href="css/flower.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/review.css"> 
+    <link rel="stylesheet" type="text/css" href="css/services.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css"> 
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div id="banner-placeholder"></div>
+
+  <div id="flower-placeholder"></div>
+
+  <div id="chooseus-placeholder"></div>
+
+  <div id="review-placeholder"></div>
+
+  <div id="services-placeholder"></div>
+
+  <section id="footer-section">
+    <div id="footer-placeholder"></div>
+  </section>
+
+<!-- JavaScript -->
+<script>
+  function loadHTML(url, placeholderId) {
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById(placeholderId).innerHTML = html;
+        if (placeholderId === 'review-placeholder') {
+          initializeSlider();
+        }
+      })
+      .catch(error => console.error('Error loading HTML:', error));
+  }
+
+  // Load content for each section
+  loadHTML('html/header.html', 'header-placeholder');
+  loadHTML('html/banner.html', 'banner-placeholder');
+  loadHTML('html/flower.html', 'flower-placeholder');
+  loadHTML('html/chooseus.html', 'chooseus-placeholder');
+  loadHTML('html/review.html', 'review-placeholder');
+  loadHTML('html/services.html', 'services-placeholder'); 
+  loadHTML('html/footer.html', 'footer-placeholder'); 
+
+  // Function to initialize the slider
+  function initializeSlider() {
+    const prevButton = document.querySelector('.review-nav.prev');
+    const nextButton = document.querySelector('.review-nav.next');
+    const testimonials = document.querySelectorAll('.review-testimonial');
+    const dots = document.querySelectorAll('.review-dot');
+
+    if (!prevButton || !nextButton || !testimonials.length || !dots.length) {
+        console.error("Slider elements not found!");
+        return;
+    }
+
+    let currentSlide = 0;
+
+    function showSlide(slideIndex) {
+        if (slideIndex < 0 || slideIndex >= testimonials.length) {
+            return;
+        }
+
+        testimonials.forEach(testimonial => testimonial.style.display = 'none');
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        testimonials[slideIndex].style.display = 'block';
+        dots[slideIndex].classList.add('active');
+        currentSlide = slideIndex;
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+        showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % testimonials.length;
+        showSlide(currentSlide);
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+
+    nextButton.addEventListener('click', nextSlide);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Show the initial slide when the page loads
+    showSlide(currentSlide);
+  }
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

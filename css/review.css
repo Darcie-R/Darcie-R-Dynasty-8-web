@@ -1,0 +1,307 @@
+/* Styles for background section */
+#background-section {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.white-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4cm;
+  background-color: white;
+}
+
+.background-image {
+  position: absolute;
+  top: 4cm;
+  left: 0;
+  width: 100%;
+  height: calc(110%);
+  background-image: url('/images/Screenshot 2024-05-14 142318.png'); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Unique color variables */
+:root {
+  --review-space-cadet: #67bb4e;
+  --review-sunglow: #000000;
+  --review-dark-cyan: #64c57d;
+  --review-paynes-gray: #000000;
+  --review-light-color: #fff;
+  --review-muted-color: slategray;
+  --review-dot-color: #ccc;
+}
+
+.review-testimonial-container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Rest of your CSS code remains unchanged */
+
+
+.review-testimonial-slider {
+  max-width: 2000px; /* Keep a maximum width for responsiveness */
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  position: absolute; /* Position absolutely */
+  top: calc(10% + 2cm); /* Move down by 10% + 2cm */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #67bb4e; /* Change this to the green color */
+  color: var(--review-light-color); /* Ensure text is readable */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* Ensure it's above the white background */
+  overflow: hidden;
+}
+
+
+/* Styles for testimonial list, individual testimonials, user info, etc. */
+
+.review-testimonial-slider h1 {
+  text-align: center;
+}
+
+.review-testimonial-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.review-testimonial {
+  flex: 1 0 100%;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-testimonial .bi-quote {
+  font-size: 4rem;
+  color: var(--review-sunglow);
+  opacity: 0.75;
+}
+
+.review-testimonial blockquote {
+  font-size: 1.25rem;
+  margin-inline: 20px;
+}
+
+.review-user-info {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-user-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.review-user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.review-user-details .review-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--review-dark-cyan);
+}
+
+.review-user-details .review-company {
+  color: var(--review-muted-color);
+}
+
+/* Button Navigation styles */
+.review-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--review-light-color);
+  color: var(--review-paynes-gray);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.review-testimonial-slider {
+  max-width: 2000px; /* Keep a maximum width for responsiveness */
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  position: absolute; /* Position absolutely */
+  top: calc(10% + 2cm); /* Move down by 10% + 2cm */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #008000; /* Green background */
+  color: #ffffff; /* White text */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* Ensure it's above the white background */
+  overflow: hidden;
+}
+
+.review-testimonial-slider h1 {
+  text-align: center;
+  color: #ffffff; /* White title */
+  font-family: 'Lato', sans-serif; /* Change title font to Lato */
+  font-size: 30px; /* Set title font size to 20px */
+  margin-bottom: 0.2cm; /* Add 2cm gap below the title */
+}
+
+.review-testimonial blockquote {
+  font-size: 15px; /* Set review text font size to 15px */
+  font-family: 'Roboto', sans-serif; /* Change text font to Roboto */
+  margin-inline: 20px;
+  color: #ffffff; /* White review text */
+}
+
+.review-testimonial-slider:hover .review-nav {
+  opacity: 1;
+}
+
+.review-testimonial .bi-quote {
+  font-size: 4rem;
+  color: #000000; /* Black quote marks */
+  opacity: 0.75;
+}
+
+.review-testimonial blockquote {
+  font-size: 1.25rem;
+  margin-inline: 20px;
+  color: #ffffff; /* White review text */
+}
+
+.review-user-info .review-user-details .review-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #ffffff; /* White name */
+}
+
+.review-user-info .review-user-details .review-company {
+  color: #000000; /* Black position */
+}
+
+.review-dots-container .review-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-inline: 5px;
+  background-color: #ffffff; /* White dots */
+  transition: width 0.5s;
+}
+
+.review-dots-container .review-dot.active {
+  width: 30px;
+  background-color: #67bb4e; /* Light green active dot */
+}
+
+/* Button Navigation styles */
+.review-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #ffffff; /* White navigation buttons */
+  color: #64c57d; /* Green arrow color */
+  transition: 0.3s;
+  opacity: 0;
+  border: none; /* Remove black circle outline */
+}
+
+.review-testimonial-slider:hover .review-nav {
+  opacity: 1;
+}
+
+.review-nav:hover {
+  background-color: #67bb4e; /* Light green hover state */
+  color: #ffffff; /* White text on hover */
+}
+
+.review-nav.prev {
+  left: 10px;
+}
+
+.review-nav.next {
+  right: 10px;
+}
+
+/* Dot Navigation styles */
+.review-dots-container {
+  text-align: center;
+}
+
+.review-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-inline: 5px;
+  background-color: #ffffff; /* White dots */
+  transition: width 0.5s;
+}
+
+.review-dot.active {
+  width: 30px;
+  background-color: #64c57d; /* Light green active dot */
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+  /* Adjust background section height */
+  #background-section {
+    height: 100vh; /* Full viewport height */
+  }
+
+  /* Adjust white section height */
+  .white-section {
+    height: 20vh; /* Adjust as needed */
+  }
+
+  /* Adjust background image position */
+  .background-image {
+    top: 20vh; /* Move down by white section height */
+    height: calc(100vh + 20px); /* Adjust height to fit remaining space and add 20px */
+    background-attachment: fixed; /* Keep the background fixed */
+  }
+
+  /* Adjust testimonial slider styles */
+  .review-testimonial-slider {
+    padding: 20px; /* Adjust padding */
+    width: 90%; /* Adjust width */
+    height: auto; /* Allow dynamic height */
+    min-height: 500px; /* Minimum height */
+    max-width: none; /* Remove max-width */
+    margin: 0 auto; /* Center the slider */
+    position: absolute; /* Position absolutely */
+    top: 20vh; /* Position 20% over the white section */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -20%); /* Adjust horizontal and vertical centering */
+    background-color: #008000; /* Green background */
+    color: var(--review-light-color); /* Ensure text is readable */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    z-index: 2; /* Ensure it's above the white background */
+    overflow: hidden;
+  }
+
+  /* Other styles remain unchanged */
+}

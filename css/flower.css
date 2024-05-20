@@ -1,0 +1,140 @@
+/* Scoped Pretty Flower Section Styles */
+.pretty-flower-container {
+    text-align: center; /* Center align the content within the container */
+}
+
+.pretty-flower-container .pretty-flower {
+    margin: 10px;
+    padding: 100px 100px 10px 100px; /* Adjust padding as needed */
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.pretty-flower-container .pretty-flower .flower-content {
+    display: flex;
+    align-items: center;
+}
+
+.pretty-flower-container .pretty-flower .image {
+    flex: 1;
+}
+
+.pretty-flower-container .title {
+    text-align: right; /* Align title to the right */
+    margin-bottom: 20px;
+    font-family: 'Lato Heavy', sans-serif; /* Change font family */
+    font-size: 30px; /* Adjust font size */
+    white-space: nowrap; /* Prevent title from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow */
+    margin-left: 20px; /* 2cm gap between title and description */
+    margin-right: 20px; /* 2cm gap between title and button */
+}
+
+.pretty-flower-container .description {
+    flex: 1;
+    padding-right: 20px; /* Add spacing between text and image */
+    margin-right: 50px; /* Ensure there's enough gap between description and image */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Distribute space evenly between title, description, and button */
+}
+
+.pretty-flower-container .description-text {
+    font-family: 'Roboto', sans-serif; /* Change text font to Roboto */
+    font-size: 20px; /* Maintain the font size */
+    text-align: right; /* Align text to the right */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+    margin-right: 25px;
+}
+
+.pretty-flower-container .button {
+    text-align: right; /* Align button to the right */
+    margin-top: 30px;
+    margin-right: 20px; /* 4cm gap between description and button */
+}
+
+/* Button Styles */
+.pretty-flower-container .button button {
+    padding: 15px 20px; /* Increase padding for a larger button */
+    font-size: 15px; /* Increase font size for a larger button */
+    background-color: #008000; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none;
+    border-radius: 8px; /* Increase border radius for rounded corners */
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pretty-flower-container .button button:hover {
+    background-color: #519251; /* Change background color on hover */
+}
+
+/* Add mobile screen styles */
+@media only screen and (max-width: 600px) {
+    .pretty-flower-container.custom-padding {
+        padding-left: 20px; /* Adjust left padding to move the button further right */
+    }
+
+    .pretty-flower-container {
+        max-width: 100%;
+        padding: 20px;
+        text-align: center; /* Center align content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+    }
+
+    .pretty-flower-container .flower-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pretty-flower-container .title {
+        text-align: center; /* Center align the title on mobile screens */
+        font-family: 'Roboto', sans-serif; /* Change text font to Roboto */
+        font-size: 40px; /* Adjust the font size for mobile screens */
+    }    
+
+    .pretty-flower-container .description {
+        text-align: center; /* Center align the description on mobile screens */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        margin-right: 0; /* Reset margin */
+        padding-right: 0; /* Reset padding */
+    }
+
+    .pretty-flower-container .description-text {
+        font-family: 'Roboto', sans-serif; /* Change text font to Roboto */
+        font-size: 20px; /* Maintain the font size */
+        max-width: calc(100% - 4px); /* Assuming the red lines are 2px away from the edge on each side */
+        margin: 0 2px; /* Set the margin to 2px on the left and right to align with the red lines */
+        padding: 0; /* Remove any padding that may affect alignment */
+        text-align: center; /* Center align the text */
+    }
+
+    .pretty-flower-container .image {
+        width: 100%; /* Adjust the image width to fit the screen */
+        margin-bottom: 10px; /* Decrease the distance between the image and the next section */
+    }    
+
+    .pretty-flower-container .title .firm-name {
+        font-size: 30px; /* Adjust the title size to fit the screen and make it bigger than the description */
+        color: #333; /* Define the text color */
+    }
+
+    .pretty-flower-container .button {
+        margin-top: 10px; /* Adjust top margin */
+        margin-bottom: 10px; /* Adjust bottom margin */
+        text-align: center; /* Center align the button */
+        margin-left: 20px;
+    }
+
+    .why-choose-us-section {
+        margin-top: 10px; /* Adjust top margin */
+        margin-bottom: 20px; /* Adjust bottom margin */
+    }
+}
