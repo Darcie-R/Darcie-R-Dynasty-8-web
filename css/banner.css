@@ -14,7 +14,7 @@
 
 .banner img {
     width: 100%;
-    height: 110%;
+    height: calc(100% + 150px); /* Make the image 20px longer */
     object-fit: cover; /* Ensure the image covers the entire banner */
 }
 

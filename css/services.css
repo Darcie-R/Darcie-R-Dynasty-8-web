@@ -1,4 +1,3 @@
-/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -6,124 +5,108 @@
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .title-section {
     text-align: center;
-    padding: 50px 0;
-    margin-top: 2cm; /* Leave a 2cm gap above the title */
+    margin-top: 300px; /* Original margin */
+    margin-bottom: 70px;
 }
 
 .title-section h1 {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Lato Heavy', sans-serif; 
-    margin-bottom: 20px;
-    margin-top: 4cm; /* Add a space of 4cm between title and images */
+    font-size: 36px;
+    color: #333;
 }
 
-.service p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 24px; /* Adjust font size */
-    font-family: 'Lato', sans-serif; /* Specify font family */
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
+.underline {
+    width: 100px;
+    height: 3px;
+    background-color: #008000; /* Green */
+    margin: 20px auto;
 }
 
 .service-images {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-}
-
-.service-images .service {
-    width: calc(27%); /* Adjust width for three items per row with 2cm gap */
-    height: 800px; /* Adjust height as needed */
-    overflow: hidden;
-    position: relative;
-    border-radius: 0px;
-    margin-bottom: 2cm; /* Adjust the margin between rows */
-    margin-right: 1cm; /* Adjust the margin between images */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smoother effect */
-}
-
-.service-images:hover .service:not(:hover) {
-    filter: brightness(0.5); /* Dim other images */
-}
-
-.service-images:not(:hover) .service {
-    filter: none; /* Reset filter for normal state */
-}
-
-.service-images:hover .service:hover {
-    transform: scale(1.05); /* Enlarge hovered image less */
-    box-shadow: 0 0 0 4px #337233; /* Green outline */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px; /* Original margin */
+    flex-wrap: wrap; /* Added to allow wrapping */
 }
 
 .service {
-    width: calc(31% - 2cm); /* Adjust width for three items per row with 2cm gap */
-    height: 600px; /* Adjust height as needed */
-    overflow: hidden;
-    position: relative;
-    border-radius: 0px;
-    margin-bottom: 2cm; /* Adjust the margin between rows */
-    margin-right: 1cm; /* Adjust the margin between images */
-}
-
-.service:last-child {
-    margin-right: 0; /* Remove margin from the last image */
+    width: calc(33.33% - 40px); /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    margin: 0 20px; /* Original margin */
+    text-align: center;
+    background-color: #f2f2f2; /* Light gray background */
+    position: relative; /* Added */
+    overflow: hidden; /* Added */
+    transition: transform 0.3s, border-color 0.3s; /* Adjusted transition */
+    margin-bottom: 20px; /* Added margin between each service */
 }
 
 .service img {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover;
+    width: 100%; /* Adjusted image size */
+    height: 100%; /* Adjusted image size */
+    object-fit: cover; /* Added to fit the images completely */
+    transition: transform 0.3s, filter 0.3s; /* Adjusted transition */
 }
 
 .service p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
+    margin-top: 20px;
+    font-size: 20px; /* Adjusted font size */
+    color: #fff; /* Text color set to white */
+    font-family: 'Roboto', sans-serif; /* Font set to Roboto */
+    position: absolute; /* Added */
+    top: 50%; /* Added */
+    left: 50%; /* Added */
+    transform: translate(-50%, -50%); /* Added */
+    z-index: 1; /* Added */
 }
 
+.service:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    border: 3px solid #008000; /* Green outline on hover */
+}
 
-.service + .service {
-    margin-left: 20px; /* Adjust the margin between images */
+.service-images:hover .service:not(:hover) img {
+    filter: brightness(0.6); /* Dim other images when hovering over service-images container */
+}
+
+.service:hover img {
+    filter: brightness(1); /* Keep hovered image at normal brightness */
 }
 
 .see-all-services {
     text-align: center;
-    margin-top: -110px; /* Adjust margin as needed */
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-top: 50px; /* Original margin */
 }
 
 .see-all-services button {
-    font-size: 16px;
-    padding: 8px 14px;
-    border-radius: 4px;
-    background-color: #337233;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #008000; /* Green */
     color: #fff;
-    cursor: pointer;
     border: none;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 70px; /* Original margin */
 }
 
 .see-all-services button:hover {
-    background-color: #499649;
+    background-color: #005000; /* Darker green on hover */
 }
 
+@media(max-width: 767px) {
+    .service {
+        width: calc(50% - 40px); /* Adjusted width for smaller screens */
+    }
+}
+
+@media(max-width: 768px) {
+    .service {
+        width: calc(100% - 40px); /* Adjusted width for screens 768px or less */
+    }
+}

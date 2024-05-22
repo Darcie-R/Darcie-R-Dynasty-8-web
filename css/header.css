@@ -44,13 +44,12 @@ body::-webkit-scrollbar-track {
     background-color: #519251; /* Change background color on hover */
 }
 
-
 /* Header Styles */
 .header {
-    position: fixed;
+    position: fixed; /* Fix header position */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Set width to 100% */
     background-color: #f1f1f1;
     padding: 20px 10px;
     z-index: 1000;
@@ -94,19 +93,6 @@ body::-webkit-scrollbar-track {
 
 .header-right {
     float: right;
-}
-
-
-@media screen and (max-width: 500px) {
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .header-right {
-        float: none;
-    }
 }
 
 /* Dropdown Styles */
@@ -166,4 +152,32 @@ body::-webkit-scrollbar-track {
 .header-right a.active:hover {
     background-color: rgb(41, 141, 46);
     color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+    .header {
+        position: fixed; /* Ensure header remains fixed on mobile */
+        width: 100%;
+    }
+
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 12px 20px; /* Add padding for better touch interaction */
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .dropdown-content {
+        position: relative; /* Make dropdown content position relative on mobile */
+    }
+
+    .dropdown-content a {
+        padding: 12px 20px; /* Add padding for better touch interaction */
+        text-align: left; /* Ensure text is aligned left */
+    }
 }

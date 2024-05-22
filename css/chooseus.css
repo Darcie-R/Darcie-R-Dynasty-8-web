@@ -78,3 +78,97 @@
         margin-bottom: 30px; /* Reduce margin for mobile */
     }
 }
+
+@media (min-width: 1191px) {
+    .about-us-container {
+        max-width: calc(100vw - 300px); /* Set max-width to 100% of the viewport width minus 300px */
+        padding: 100px 10px; /* Add 100px padding top and bottom, and 10px padding on each side */
+        display: flex;
+        align-items: center; /* Align items vertically */
+    }
+
+    .about-us-image {
+        max-width: 45%; /* Ensure the image fits within the container */
+        padding-top: 50px; /* Add 50px space above the image */
+        padding-bottom: 50px; /* Add 50px space below the image */
+    }
+
+    .about-us-content {
+        flex: 1;
+        display: flex; /* Set display to flex */
+        flex-direction: column; /* Set flex-direction to column */
+        align-items: flex-start; /* Align items to the start of the flex container */
+        margin-left: 20px; /* Add margin to the left of the content */
+    }
+
+    .about-us-title {
+        font-size: 2.5em;
+        margin-top: 10px; /* Add 10px space above the title */
+        margin-bottom: 10px; /* Add 10px space below the title */
+        text-align: left; /* Align the title to the left */
+        margin-left: 9px; /* Add margin to the left of the title */
+    }
+
+    .about-us-description {
+        font-size: 20px;
+        font-family: '', sans-serif; /* Use Lato font */
+        text-align: left; /* Align the description to the left */
+        margin-left: 20px; /* Add margin to the left of the description */
+    }
+
+    .about-us-button {
+        font-size: 1.1em;
+        text-align: left; /* Align the button to the left */
+        margin-top: 10px; /* Add 10px space above the button */
+        margin-left: 25px; /* Add margin to the left of the button */
+    }
+}
+
+@media (min-width: 1190px) {
+    .about-us-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-us-image {
+        max-width: 50%; /* Ensure the image fits within the container */
+        flex: 1;
+        margin-right: 20px;
+        margin-top: 0; /* Reset margin-top for larger screens */
+    }
+
+    .about-us-content {
+        flex: 2;
+        padding: 20px;
+    }
+
+    .about-us-title {
+        font-size: 2.5em;
+        padding-top: 50px;
+    }
+
+    .about-us-description {
+        font-size: 1.25em; /* Change font size to 20px */
+        font-family: 'Lato', sans-serif; /* Use Lato font */
+    }
+
+    .about-us-button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 1189px) {
+    .about-us-container {
+        flex-direction: column-reverse; /* Change the order to place the image below the content */
+    }
+
+    .about-us-image {
+        margin-top: 0px; /* Adjusted margin-top to make the image closer to the button */
+        margin-bottom: 100px; /* Added margin-bottom to create space between the image and the section underneath */
+    }
+
+    .about-us-button {
+        margin-top: 5px; /* Added margin-top to make the button closer to the image */
+        margin-bottom: 5px;
+    }
+}
