@@ -286,6 +286,13 @@
     background-position: center;
   }
 
+  .title-section h1 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+}
+.service {
+    width: calc(50% - 40px); /* Adjusted width for smaller screens */
+}
+
   /* Adjust testimonial slider styles */
   .review-testimonial-slider {
     padding: 20px; /* Adjust padding */
@@ -339,4 +346,11 @@
     height: 70vh; /* Set height to 50% of the viewport height on mobile */
   }
 
+  .service {
+    width: calc(100% - 40px); /* Adjusted width for screens 768px or less */
+}
+
+.service-images {
+    margin-top: 5px; /* Adjusted margin for mobile */
+}
 }

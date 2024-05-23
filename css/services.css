@@ -15,8 +15,9 @@ body {
 }
 
 .title-section h1 {
-    font-size: 36px;
+    font-size: 32px; /* Adjusted font size to make it smaller */
     color: #333;
+    font-family: 'Roboto', sans-serif; /* Set the same font as other sections */
 }
 
 .underline {
@@ -113,5 +114,9 @@ body {
     
     .service-images {
         margin-top: 5px; /* Adjusted margin for mobile */
+    }
+    
+    .title-section h1 {
+        font-size: 28px; /* Adjusted font size for mobile screens */
     }
 }
