@@ -14,7 +14,7 @@
 }
 
 .about-us-image {
-    width: calc(100% - 40px); /* Adjusted width to account for padding */
+    width: calc(100% - 60px); /* Adjusted width to account for padding */
     max-width: 560px; /* Reduced max-width for smaller image */
     height: auto;
     margin-top: 50%; /* Center the image vertically */
