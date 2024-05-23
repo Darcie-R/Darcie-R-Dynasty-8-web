@@ -73,9 +73,12 @@
 
 @media (max-width: 1189px) {
     .about-us-image {
-        margin-top: 50px; /* Increased margin-top */
-        margin-bottom: 20px; /* Adjusted margin-bottom to create 20px gap above the button */
-        padding-top: 10px;
+        width: calc(100% - 40px);
+        max-width: 560px;
+        height: auto;
+        margin: 0 auto; /* Center the image horizontally */
+        transform: translateY(50%);
+        padding-top: 20px;
     }
 
     .about-us-content {
@@ -94,6 +97,16 @@
         margin-top: 20px; /* Add 20px space above the button */
         margin-bottom: 20px; /* Maintain margin-bottom for the button */
         padding-bottom: 20px; /* Maintain bottom padding to the button */
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-image {
+        width: calc(100% - 40px);
+        max-width: 80%; /* Adjusted max-width for smaller screens */
+        margin-top: 20px; /* Increased margin-top */
+        transform: translateY(0); /* Reset transform to default */
         padding-top: 20px;
     }
 }

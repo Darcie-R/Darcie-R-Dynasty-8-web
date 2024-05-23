@@ -36,7 +36,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        position: relative; /* Ensure relative positioning */
+        position: relative;
+        background-color: #f9f9f9;
       }
 
       .header .logo {
@@ -44,34 +45,37 @@
       }
 
       .header .hamburger {
-        order: 1; /* Adjust order */
+        order: 1;
         display: block;
-        position: absolute; /* Position absolutely */
-        top: 50%; /* Align to the middle */
-        transform: translateY(-50%); /* Adjust vertical alignment */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         right: 10px;
         font-size: 1.5rem;
       }
 
       .header-right {
-        display: none;
-        position: absolute;
-        top: 60px;
+        opacity: 0;
+        display: flex;
+        position: fixed;
+        top: 60px; /* Adjust top position */
         right: 0;
         background-color: #f9f9f9;
-        width: 100%;
+        width: 100%; /* Stretch across the entire screen */
         padding: 10px;
-        text-align: left; /* Align text to the left */
-        flex-direction: column; /* Stack items vertically */
+        text-align: left;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Added transitions */
+        z-index: 998;
       }
 
       .header-right a {
         display: block;
         padding: 10px;
-        text-align: left; /* Align text to the left */
+        text-align: left;
       }
 
-      /* Checkbox Hack */
       #toggle {
         opacity: 0; 
         width: 0;
@@ -81,13 +85,32 @@
       }
 
       #toggle:checked ~ .header-right {
-        display: flex;
+        opacity: 1;
+        transform: translateX(0);
       }
 
-      /* Hamburger Icon Style */
       .hamburger {
         display: block;
         font-size: 1.5rem;
+      }
+
+      /* Add sticky header for mobile */
+      .header.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        animation: slide-down 0.5s;
+      }
+
+    }
+    
+    /* Add sticky header for mobile */
+    @keyframes slide-down {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
       }
     }
   </style>
@@ -116,5 +139,21 @@
     </div>
   </div>
 
+  <script>
+    window.onscroll = function() {scrollFunction()};
+  
+    function scrollFunction() {
+      var header = document.getElementById("header");
+      var dropdown = document.querySelector(".header-right");
+      if (window.pageYOffset > 80) {
+        header.classList.add("sticky");
+        dropdown.style.top = "0";
+      } else {
+        header.classList.remove("sticky");
+        dropdown.style.top = "60px"; // Adjust top position
+      }
+    }
+  </script>
+  
 </body>
 </html>

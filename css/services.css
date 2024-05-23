@@ -54,14 +54,15 @@ body {
 }
 
 .service p {
-    margin-top: 20px;
-    font-size: 20px; /* Adjusted font size */
+    margin: 0;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Added font weight */
     color: #fff; /* Text color set to white */
     font-family: 'Roboto', sans-serif; /* Font set to Roboto */
     position: absolute; /* Added */
-    top: 50%; /* Added */
-    left: 50%; /* Added */
-    transform: translate(-50%, -50%); /* Added */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center text */
     z-index: 1; /* Added */
 }
 
@@ -108,5 +109,9 @@ body {
 @media(max-width: 768px) {
     .service {
         width: calc(100% - 40px); /* Adjusted width for screens 768px or less */
+    }
+    
+    .service-images {
+        margin-top: 5px; /* Adjusted margin for mobile */
     }
 }

@@ -114,12 +114,18 @@ body::-webkit-scrollbar-track {
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     z-index: 1;
+    right: -100%; /* Initially position the dropdown off the screen to the right */
+    top: 100%; /* Align the dropdown below the parent element */
+    transition: transform 0.3s ease; /* Add transition for transform property */
+}
+
+.dropdown-content.active {
+    transform: translateX(-100%); /* Move the dropdown to the left to make it visible */
 }
 
 .dropdown-content a {
@@ -154,6 +160,35 @@ body::-webkit-scrollbar-track {
     color: white;
 }
 
+/* Hamburger Icon Style */
+.hamburger {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.hamburger .line1,
+.hamburger .line2,
+.hamburger .line3 {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: transform 0.3s ease; /* Add transition for transform property */
+}
+
+.hamburger.active .line1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line2 {
+    opacity: 0;
+}
+
+.hamburger.active .line3 {    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 500px) {
     .header {
@@ -174,6 +209,12 @@ body::-webkit-scrollbar-track {
 
     .dropdown-content {
         position: relative; /* Make dropdown content position relative on mobile */
+        right: 0; /* Reset the right property for mobile */
+        transform: translateX(-100%); /* Initially position the dropdown off the screen to the left */
+    }
+
+    .dropdown-content.active {
+        transform: translateX(0); /* Move the dropdown to the right to make it visible */
     }
 
     .dropdown-content a {
@@ -181,3 +222,4 @@ body::-webkit-scrollbar-track {
         text-align: left; /* Ensure text is aligned left */
     }
 }
+
