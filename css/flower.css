@@ -71,14 +71,12 @@
     background-color: #189b18;
 }
 
-@media (max-width: 1189px) {
+@media (max-width: 768px) {
     .about-us-image {
         width: calc(100% - 40px);
-        max-width: 560px;
-        height: auto;
-        margin: 0 auto; /* Center the image horizontally */
-        transform: translateY(50%);
-        padding-top: 20px;
+        max-width: 80%; /* Adjusted max-width for smaller screens */
+        margin-top: 0; /* Reset margin-top */
+        transform: translateY(0); /* Reset transform to default */
     }
 
     .about-us-content {

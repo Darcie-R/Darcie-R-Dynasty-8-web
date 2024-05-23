@@ -280,7 +280,7 @@
     top: 4cm;
     left: 0;
     width: 100%;
-    height: calc(110% - 20px); /* Subtract 20px from the height */
+    height: calc(110% + 20px); /* Increase height by 10 pixels */
     background-image: url('/images/Screenshot 2024-05-14 142318.png'); /* Adjust path as needed */
     background-size: cover;
     background-position: center;
